@@ -1,14 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.domain;
 
-/**
- *
- * @author krixz
- */
-public class DirectorOverload {
+import javax.swing.JOptionPane;
+
+public class DirectorOverload extends EmpleadoOverload {
     
+    //utilizando poliformismo overload
+    public void datos(String nomb, String ape) {
+        JOptionPane.showMessageDialog(null, "Nombre: "+ nomb +"\nApellido: "+ ape);
+    }
+
+    public void labores(String lab) {
+        JOptionPane.showMessageDialog(null, "Soy director y me dedico a: "+ lab);
+    }
+
+    public void sueldo(int horas, double pagoH) {
+            JOptionPane.showMessageDialog(null, "El pago es: "+ horas*pagoH);
+    }
 }
